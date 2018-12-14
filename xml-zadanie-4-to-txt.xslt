@@ -11,12 +11,18 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Templates -->
     <xsl:template name="BookStore" match="/bookStore">
             <xsl:call-template name="ReportGenerationTime" />
+
             <xsl:text>Spis Książek:&#xa;</xsl:text>
             <xsl:text>============================================================================================================&#xa;</xsl:text>
             <xsl:text>Tytuł:                   Autor:              Gatunek:  Wydawca:        Rok:  Strony: ISBN:&#xa;&#xa;</xsl:text>
             <xsl:apply-templates select="books" />
-             <xsl:text>============================================================================================================&#xa;</xsl:text>
+
+            <xsl:text>============================================================================================================&#xa;&#xa;</xsl:text>
+
+            <xsl:text>=========================================&#xa;</xsl:text>
+            <xsl:text>Statystyki:&#xa;&#xa;</xsl:text>
             <xsl:call-template name="Statistics" />
+            <xsl:text>&#xa;=========================================&#xa;</xsl:text>
     </xsl:template>
         <xsl:template name="ReportGenerationTime">
             <xsl:text>=======================&#xa;</xsl:text>
@@ -93,15 +99,14 @@
                     </xsl:element>
                 </xsl:template>
         <xsl:template name="Statistics">
-            <xsl:element name="statistics">
-                <xsl:call-template name="OverallBookCount" />
-                <xsl:call-template name="AveragePageCount" />
-                <xsl:call-template name="AveragePrice" />
-                <xsl:call-template name="GenreCount" />
-                <xsl:call-template name="PublisherCount" />
-                <xsl:call-template name="MostCommonCoverType" />
+                <xsl:text>Liczba książek:                   </xsl:text><xsl:call-template name="OverallBookCount" /> <xsl:text>&#xa;</xsl:text>
+                <xsl:text>Średnia liczba stron:             </xsl:text><xsl:call-template name="AveragePageCount" /> <xsl:text>&#xa;</xsl:text>
+                <xsl:text>Średnia cena:                     </xsl:text><xsl:call-template name="AveragePrice" /> <xsl:text>&#xa;</xsl:text>
+                <xsl:text>Liczba gatunków:                  </xsl:text><xsl:call-template name="GenreCount" /> <xsl:text>&#xa;</xsl:text>
+                <xsl:text>Liczba wydawców:                  </xsl:text><xsl:call-template name="PublisherCount" /> <xsl:text>&#xa;</xsl:text>
+                <xsl:text>Najpopularniejszy rodzaj okładki: </xsl:text><xsl:call-template name="MostCommonCoverType" /> <xsl:text>&#xa;&#xa;</xsl:text>
+                <xsl:text>Autor:              Liczba książek:&#xa;</xsl:text>
                 <xsl:call-template name="BookCountsPerAuthor" />
-            </xsl:element>
         </xsl:template>
             <xsl:template name="OverallBookCount">
                 <xsl:element name="overallBookCount">
@@ -146,12 +151,12 @@
                                   select="count(/bookStore/books/book[@authorID = $authorID])" />
                         <xsl:element name="authorsBookCount">
                             <xsl:element name="author">
-                                <xsl:value-of select="concat(
+                                <xsl:value-of select="substring( concat( concat(
                                     /bookStore/authors/author[@authorID = $authorID]/firstName, ' ',
-                                    /bookStore/authors/author[@authorID = $authorID]/lastName)" />
+                                    /bookStore/authors/author[@authorID = $authorID]/lastName), '                                 ' ),1,20 )" />
                             </xsl:element>
                             <xsl:element name="bookCount">
-                                <xsl:value-of select="$bookCount" />
+                                <xsl:value-of select="$bookCount" /><xsl:text>&#xa;</xsl:text>
                             </xsl:element>
                         </xsl:element>
                     </xsl:for-each>
