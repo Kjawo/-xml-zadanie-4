@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- File: xml-zadanie-4.xml -->
+<!-- Authors: Konrad Jaworski, Tomasz Witczak -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+<bookStore>
+    <header>
+        <mainTitle>INWENTARZ KSIĄŻEK</mainTitle>
+        <description>Technologie XML - FTIMS 2018/19</description>
+        <students>
+            <student>
+                <firstName>Konrad</firstName>
+                <lastName>Jaworski</lastName>
+                <indexNr>216782</indexNr>
+            </student>
+            <student>
+                <firstName>Tomasz</firstName>
+                <lastName>Witczak</lastName>
+                <indexNr>216920</indexNr>
+            </student>
+        </students>
+    </header>
+
+    <authors>
+        <author authorID="ASapkowski">
+            <firstName>Andrzej</firstName>
+            <lastName>Sapkowski</lastName>
+            <birthDate>21-06-1948</birthDate>
+        </author>
+        <author authorID="SKing">
+            <firstName>Stephen</firstName>
+            <lastName>King</lastName>
+            <birthDate>21-09-1947</birthDate>
+        </author>
+        <author authorID="UEco">
+            <firstName>Umberto</firstName>
+            <lastName>Eco</lastName>
+            <birthDate>05-01-1932</birthDate>
+        </author>
+        <author authorID="BPrus">
+            <firstName>Bolesław</firstName>
+            <lastName>Prus</lastName>
+            <birthDate>20-08-1847</birthDate>
+        </author>
+        <author authorID="GRRMartin">
+            <firstName>George</firstName>
+            <lastName>Martin</lastName>
+            <birthDate>21-06-1948</birthDate>
+        </author>
+        <author authorID="JGreen">
+            <firstName>John</firstName>
+            <lastName>Green</lastName>
+            <birthDate>24-08-1977</birthDate>
+        </author>
+        <author authorID="HSienkiewicz">
+            <firstName>Henryk</firstName>
+            <lastName>Sienkiewicz</lastName>
+            <birthDate>05-05-1846</birthDate>
+        </author>
+    </authors>
+
+    <genres>
+        <genre genreID="fantasy">fantasy</genre>
+        <genre genreID="horror">horror</genre>
+        <genre genreID="kryminał">kryminał</genre>
+        <genre genreID="powieść">powieść</genre>
+    </genres>
+
+    <coverTypes>
+        <coverType coverTypeID="paperback">miękka</coverType>
+        <coverType coverTypeID="hardback">twarda</coverType>
+    </coverTypes>
+
+    <publishers>
+        <publisher publisherID="superNOWA">superNOWA</publisher>
+        <publisher publisherID="Viking">Viking</publisher>
+        <publisher publisherID="Doubleday">Doubleday</publisher>
+        <publisher publisherID="Signet">Signet</publisher>
+        <publisher publisherID="Bompiani">Bompiani</publisher>
+        <publisher publisherID="Gebethner-Wolff">Gebethner-Wolff</publisher>
+        <publisher publisherID="Zysk">Zysk</publisher>
+        <publisher publisherID="Dutton">Dutton</publisher>
+        <publisher publisherID="Greg">Greg</publisher>
+    </publishers>
+
+    <books>
+        <book bookID="1" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Ostatnie Życzenie</title>
+            <pages>288</pages>
+            <publishYear>1993</publishYear>
+            <price>35.99</price>
+            <frontCover src="OstatnieZyczenie.jpg"/>
+            <isbn>978-0-5754-08244-1</isbn>
+        </book>
+        <book bookID="2" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Miecz przeznaczenia</title>
+            <pages>384</pages>
+            <publishYear>1992</publishYear>
+            <price>35.99</price>
+            <frontCover src="MieczPrzeznaczenia.jpg"/>
+            <isbn>978-1-4732-11532-7</isbn>
+        </book>
+        <book bookID="3" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="hardback" publisherID="superNOWA">
+            <title>Krew elfów</title>
+            <pages>320</pages>
+            <publishYear>1994</publishYear>
+            <price>39.99</price>
+            <frontCover src="KrewElfow.jpg"/>
+            <isbn>978-0-5751-08484-1</isbn>
+        </book>
+        <book bookID="4" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Czas pogardy</title>
+            <pages>352</pages>
+            <publishYear>1995</publishYear>
+            <price>35.99</price>
+            <frontCover src="CzasPogardy.jpg"/>
+            <isbn>978-0-5575-09094-1</isbn>
+        </book>
+        <book bookID="5" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Chrzest ognia</title>
+            <pages>352</pages>
+            <publishYear>1996</publishYear>
+            <price>35.99</price>
+            <frontCover src="ChrzestOgnia.jpg"/>
+            <isbn>978-0-5475-09097-2</isbn>
+        </book>
+        <book bookID="6" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Wieża Jaskółki</title>
+            <pages>462</pages>
+            <publishYear>1997</publishYear>
+            <price>35.99</price>
+            <frontCover src="WiezaJaskolki.jpg"/>
+            <isbn>978-0-5765-09083-3</isbn>
+        </book>
+        <book bookID="7" authorID="ASapkowski" genreID="fantasy"
+              coverTypeID="paperback" publisherID="superNOWA">
+            <title>Pani Jeziora</title>
+            <pages>544</pages>
+            <publishYear>1999</publishYear>
+            <price>38.99</price>
+            <frontCover src="PaniJeziora.jpg"/>
+            <isbn>978-0-5758-09084-4</isbn>
+        </book>
+        <book bookID="8" authorID="SKing" genreID="horror"
+              coverTypeID="paperback" publisherID="Viking">
+            <title>It</title>
+            <pages>1376</pages>
+            <publishYear>1986</publishYear>
+            <price>45.49</price>
+            <frontCover src="It.jpg"/>
+            <isbn>670-0-1234-81302-8</isbn>
+        </book>
+        <book bookID="9" authorID="SKing" genreID="horror"
+              coverTypeID="paperback" publisherID="Doubleday">
+            <title>The Shining</title>
+            <pages>447</pages>
+            <publishYear>1977</publishYear>
+            <price>30.49</price>
+            <frontCover src="TheShinning.jpg"/>
+            <isbn>978-0-3875-12167-5</isbn>
+        </book>
+        <book bookID="10" authorID="SKing" genreID="fantasy"
+              coverTypeID="hardback" publisherID="Signet">
+            <title>The Green Mile</title>
+            <pages>416</pages>
+            <publishYear>1996</publishYear>
+            <price>41.49</price>
+            <frontCover src="TheGreenMile.jpg"/>
+            <isbn>345-2-5258-67882-7</isbn>
+        </book>
+        <book bookID="11" authorID="UEco" genreID="kryminał"
+              coverTypeID="hardback" publisherID="Bompiani">
+            <title>The Name of the Rose</title>
+            <pages>512</pages>
+            <publishYear>1980</publishYear>
+            <price>49.99</price>
+            <frontCover src="TheNameoftheRose.jpg"/>
+            <isbn>231-0-1455-14647-4</isbn>
+        </book>
+        <book bookID="12" authorID="BPrus" genreID="powieść"
+              coverTypeID="paperback" publisherID="Gebethner-Wolff">
+            <title>Lalka</title>
+            <pages>664</pages>
+            <publishYear>1890</publishYear>
+            <price>23.23</price>
+            <frontCover src="Lalka.jpg"/>
+            <isbn>123-3-0551-05734-3</isbn>
+        </book>
+        <book bookID="13" authorID="GRRMartin" genreID="fantasy"
+              coverTypeID="hardback" publisherID="Zysk">
+            <title>A Game of Thrones</title>
+            <pages>684</pages>
+            <publishYear>1996</publishYear>
+            <price>41.49</price>
+            <frontCover src="AGameOfThrones.jpg"/>
+            <isbn>657-0-5583-10354-7</isbn>
+        </book>
+        <book bookID="14" authorID="GRRMartin" genreID="fantasy"
+              coverTypeID="paperback" publisherID="Zysk">
+            <title>A Clash of Kings</title>
+            <pages>768</pages>
+            <publishYear>1999</publishYear>
+            <price>35.49</price>
+            <frontCover src="AClashOfKings.jpg"/>
+            <isbn>845-0-5537-10803-4</isbn>
+        </book>
+        <book bookID="15" authorID="GRRMartin" genreID="fantasy"
+              coverTypeID="hardback" publisherID="Zysk">
+            <title>A Storm of Swords</title>
+            <pages>973</pages>
+            <publishYear>2000</publishYear>
+            <price>39.99</price>
+            <frontCover src="AStormOfSwords.jpg"/>
+            <isbn>467-0-5538-10663-5</isbn>
+        </book>
+        <book bookID="16" authorID="GRRMartin" genreID="fantasy"
+              coverTypeID="hardback" publisherID="Zysk">
+            <title>A Feast for Crows</title>
+            <pages>753</pages>
+            <publishYear>2005</publishYear>
+            <price>42.57</price>
+            <frontCover src="AFeastForCrows.jpg"/>
+            <isbn>757-0-5593-80150-3</isbn>
+        </book>
+        <book bookID="17" authorID="GRRMartin" genreID="fantasy"
+              coverTypeID="hardback" publisherID="Zysk">
+            <title>A Dance with Dragons</title>
+            <pages>1056</pages>
+            <publishYear>2011</publishYear>
+            <price>55.67</price>
+            <frontCover src="ADanceWithDragons.jpg"/>
+            <isbn>636-0-5286-47181-7</isbn>
+        </book>
+        <book bookID="18" authorID="JGreen" genreID="powieść"
+              coverTypeID="paperback" publisherID="Dutton">
+            <title>The Fault in Our Stars</title>
+            <pages>313</pages>
+            <publishYear>2012</publishYear>
+            <price>30.27</price>
+            <frontCover src="TheFaultInOurStars.jpg"/>
+            <isbn>858-0-5295-47881-7</isbn>
+        </book>
+        <book bookID="19" authorID="HSienkiewicz" genreID="powieść"
+              coverTypeID="paperback" publisherID="Greg">
+            <title>Ogniem i mieczem</title>
+            <pages>844</pages>
+            <publishYear>1884</publishYear>
+            <price>20.27</price>
+            <frontCover src="OgniemIMieczem.jpg"/>
+            <isbn>918-3-5575-09083-1</isbn>
+        </book>
+        <book bookID="20" authorID="HSienkiewicz" genreID="powieść"
+              coverTypeID="paperback" publisherID="Greg">
+            <title>Potop</title>
+            <pages>936</pages>
+            <publishYear>1886</publishYear>
+            <price>29.87</price>
+            <frontCover src="Potop.jpg"/>
+            <isbn>918-3-5555-09083-2</isbn>
+        </book>
+        <book bookID="21" authorID="HSienkiewicz" genreID="powieść"
+              coverTypeID="paperback" publisherID="Greg">
+            <title>Pan Wołodyjowski</title>
+            <pages>400</pages>
+            <publishYear>1887</publishYear>
+            <price>10.36</price>
+            <frontCover src="PanWolodyjowski.jpg"/>
+            <isbn>918-3-5585-09083-3</isbn>
+        </book>
+    </books>
+</bookStore>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
