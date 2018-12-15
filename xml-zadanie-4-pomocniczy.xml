@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientReport>
+    <reportInformation>
+        <reportGenerationTime>17:14 15-12-2018</reportGenerationTime>
+    </reportInformation>
+    <book>
+        <title>A Clash of Kings</title>
+        <author>George Martin</author>
+        <genre>fantasy</genre>
+        <publisher>Zysk</publisher>
+        <publishYear>1999</publishYear>
+        <coverType>miękka</coverType>
+        <pages>768</pages>
+        <isbn>845-0-5537-10803-4</isbn>
+        <price>35.49</price>
+    </book>
+    <book>
+        <title>A Dance with Dragons</title>
+        <author>George Martin</author>
+        <genre>fantasy</genre>
+        <publisher>Zysk</publisher>
+        <publishYear>2011</publishYear>
+        <coverType>twarda</coverType>
+        <pages>1056</pages>
+        <isbn>636-0-5286-47181-7</isbn>
+        <price>55.67</price>
+    </book>
+    <book>
+        <title>A Feast for Crows</title>
+        <author>George Martin</author>
+        <genre>fantasy</genre>
+        <publisher>Zysk</publisher>
+        <publishYear>2005</publishYear>
+        <coverType>twarda</coverType>
+        <pages>753</pages>
+        <isbn>757-0-5593-80150-3</isbn>
+        <price>42.57</price>
+    </book>
+    <book>
+        <title>A Game of Thrones</title>
+        <author>George Martin</author>
+        <genre>fantasy</genre>
+        <publisher>Zysk</publisher>
+        <publishYear>1996</publishYear>
+        <coverType>twarda</coverType>
+        <pages>684</pages>
+        <isbn>657-0-5583-10354-7</isbn>
+        <price>41.49</price>
+    </book>
+    <book>
+        <title>A Storm of Swords</title>
+        <author>George Martin</author>
+        <genre>fantasy</genre>
+        <publisher>Zysk</publisher>
+        <publishYear>2000</publishYear>
+        <coverType>twarda</coverType>
+        <pages>973</pages>
+        <isbn>467-0-5538-10663-5</isbn>
+        <price>39.99</price>
+    </book>
+    <book>
+        <title>Chrzest ognia</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1996</publishYear>
+        <coverType>miękka</coverType>
+        <pages>352</pages>
+        <isbn>978-0-5475-09097-2</isbn>
+        <price>35.99</price>
+    </book>
+    <book>
+        <title>Czas pogardy</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1995</publishYear>
+        <coverType>miękka</coverType>
+        <pages>352</pages>
+        <isbn>978-0-5575-09094-1</isbn>
+        <price>35.99</price>
+    </book>
+    <book>
+        <title>It</title>
+        <author>Stephen King</author>
+        <genre>horror</genre>
+        <publisher>Viking</publisher>
+        <publishYear>1986</publishYear>
+        <coverType>miękka</coverType>
+        <pages>1376</pages>
+        <isbn>670-0-1234-81302-8</isbn>
+        <price>45.49</price>
+    </book>
+    <book>
+        <title>Krew elfów</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1994</publishYear>
+        <coverType>twarda</coverType>
+        <pages>320</pages>
+        <isbn>978-0-5751-08484-1</isbn>
+        <price>39.99</price>
+    </book>
+    <book>
+        <title>Lalka</title>
+        <author>Bolesław Prus</author>
+        <genre>powieść</genre>
+        <publisher>Gebethner-Wolff</publisher>
+        <publishYear>1890</publishYear>
+        <coverType>miękka</coverType>
+        <pages>664</pages>
+        <isbn>123-3-0551-05734-3</isbn>
+        <price>23.23</price>
+    </book>
+    <book>
+        <title>Miecz przeznaczenia</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1992</publishYear>
+        <coverType>miękka</coverType>
+        <pages>384</pages>
+        <isbn>978-1-4732-11532-7</isbn>
+        <price>35.99</price>
+    </book>
+    <book>
+        <title>Ogniem i mieczem</title>
+        <author>Henryk Sienkiewicz</author>
+        <genre>powieść</genre>
+        <publisher>Greg</publisher>
+        <publishYear>1884</publishYear>
+        <coverType>miękka</coverType>
+        <pages>844</pages>
+        <isbn>918-3-5575-09083-1</isbn>
+        <price>20.27</price>
+    </book>
+    <book>
+        <title>Ostatnie Życzenie</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1993</publishYear>
+        <coverType>miękka</coverType>
+        <pages>288</pages>
+        <isbn>978-0-5754-08244-1</isbn>
+        <price>35.99</price>
+    </book>
+    <book>
+        <title>Pan Wołodyjowski</title>
+        <author>Henryk Sienkiewicz</author>
+        <genre>powieść</genre>
+        <publisher>Greg</publisher>
+        <publishYear>1887</publishYear>
+        <coverType>miękka</coverType>
+        <pages>400</pages>
+        <isbn>918-3-5585-09083-3</isbn>
+        <price>10.36</price>
+    </book>
+    <book>
+        <title>Pani Jeziora</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1999</publishYear>
+        <coverType>miękka</coverType>
+        <pages>544</pages>
+        <isbn>978-0-5758-09084-4</isbn>
+        <price>38.99</price>
+    </book>
+    <book>
+        <title>Potop</title>
+        <author>Henryk Sienkiewicz</author>
+        <genre>powieść</genre>
+        <publisher>Greg</publisher>
+        <publishYear>1886</publishYear>
+        <coverType>miękka</coverType>
+        <pages>936</pages>
+        <isbn>918-3-5555-09083-2</isbn>
+        <price>29.87</price>
+    </book>
+    <book>
+        <title>The Fault in Our Stars</title>
+        <author>John Green</author>
+        <genre>powieść</genre>
+        <publisher>Dutton</publisher>
+        <publishYear>2012</publishYear>
+        <coverType>miękka</coverType>
+        <pages>313</pages>
+        <isbn>858-0-5295-47881-7</isbn>
+        <price>30.27</price>
+    </book>
+    <book>
+        <title>The Green Mile</title>
+        <author>Stephen King</author>
+        <genre>fantasy</genre>
+        <publisher>Signet</publisher>
+        <publishYear>1996</publishYear>
+        <coverType>twarda</coverType>
+        <pages>416</pages>
+        <isbn>345-2-5258-67882-7</isbn>
+        <price>41.49</price>
+    </book>
+    <book>
+        <title>The Name of the Rose</title>
+        <author>Umberto Eco</author>
+        <genre>kryminał</genre>
+        <publisher>Bompiani</publisher>
+        <publishYear>1980</publishYear>
+        <coverType>twarda</coverType>
+        <pages>512</pages>
+        <isbn>231-0-1455-14647-4</isbn>
+        <price>49.99</price>
+    </book>
+    <book>
+        <title>The Shining</title>
+        <author>Stephen King</author>
+        <genre>horror</genre>
+        <publisher>Doubleday</publisher>
+        <publishYear>1977</publishYear>
+        <coverType>miękka</coverType>
+        <pages>447</pages>
+        <isbn>978-0-3875-12167-5</isbn>
+        <price>30.49</price>
+    </book>
+    <book>
+        <title>Wieża Jaskółki</title>
+        <author>Andrzej Sapkowski</author>
+        <genre>fantasy</genre>
+        <publisher>superNOWA</publisher>
+        <publishYear>1997</publishYear>
+        <coverType>miękka</coverType>
+        <pages>462</pages>
+        <isbn>978-0-5765-09083-3</isbn>
+        <price>35.99</price>
+    </book>
+    <statistics>
+        <overallBookCount>21</overallBookCount>
+        <averagePageCount>612</averagePageCount>
+        <averagePrice>35.98</averagePrice>
+        <genreCount>4</genreCount>
+        <publisherCount>9</publisherCount>
+        <mostCommonCoverType>miękka</mostCommonCoverType>
+        <bookCountsPerAuthor>
+            <authorsBookCount>
+                <author>Umberto Eco</author>
+                <bookCount>1</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>John Green</author>
+                <bookCount>1</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>Stephen King</author>
+                <bookCount>3</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>George Martin</author>
+                <bookCount>5</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>Bolesław Prus</author>
+                <bookCount>1</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>Andrzej Sapkowski</author>
+                <bookCount>7</bookCount>
+            </authorsBookCount>
+            <authorsBookCount>
+                <author>Henryk Sienkiewicz</author>
+                <bookCount>3</bookCount>
+            </authorsBookCount>
+        </bookCountsPerAuthor>
+    </statistics>
+</clientReport>
