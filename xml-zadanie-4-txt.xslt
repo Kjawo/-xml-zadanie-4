@@ -63,7 +63,7 @@
             <xsl:value-of select="concat(functions:statisticsItem($lineCharacter2, $lineLength,
                 'Średnia liczba stron', averagePageCount), '&#xa;')" />
             <xsl:value-of select="concat(functions:statisticsItem($lineCharacter2, $lineLength,
-                'Średnia cena', averagePrice), '&#xa;')" />
+                'Średnia cena [zł]', averagePrice), '&#xa;')" />
             <xsl:value-of select="concat(functions:statisticsItem($lineCharacter2, $lineLength,
                 'Łaczna liczba różnych gatunków', genreCount), '&#xa;')" />
             <xsl:value-of select="concat(functions:statisticsItem($lineCharacter2, $lineLength,
