@@ -14,7 +14,7 @@
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="A4"
                                        page-width="297mm" page-height="210mm"
-                                       margin-top="1cm" margin-bottom="1cm"
+                                       margin-top="0.25cm" margin-bottom="0.5cm"
                                        margin-left="1cm" margin-right="1cm">
                     <fo:region-body margin="1cm"/>
                     <fo:region-before extent="2cm"/>
@@ -25,11 +25,13 @@
             </fo:layout-master-set>
 
 
-            <xsl:call-template name="ReportGenerationTime" />
-
-
             <fo:page-sequence master-reference="A4">
                 <fo:flow flow-name="xsl-region-body">
+                    <fo:block font-size="1.5cm" font-weight="bold" text-align="center">Spis książek</fo:block>
+                    <fo:block text-align="center" padding="5mm">
+                        Czas i data wygenerowania raportu:
+                        <xsl:value-of select="/clientReport/reportInformation/reportGenerationTime" />
+                    </fo:block>
                     <fo:table table-layout="fixed" border="solid 2pt black"  text-align="center">
                         <fo:table-column column-width="20%"/>
                         <fo:table-column column-width="15%"/>
@@ -42,31 +44,31 @@
                         <fo:table-column column-width="8%"/>
                         <fo:table-header background-color="silver" border-bottom-style="solid" border-bottom-width="2pt">
                             <fo:table-row>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Tytuł</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Autor</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Gatunek</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Wydawca</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Rok wydania</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Rodzaj okładki</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Liczba stron</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">ISBN</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell padding="2">
+                                <fo:table-cell padding="0.5mm">
                                     <fo:block font-weight="bold">Cena [zł]</fo:block>
                                 </fo:table-cell>
                             </fo:table-row>
@@ -80,33 +82,23 @@
                 </fo:flow>
             </fo:page-sequence>
 
-            <xsl:call-template name="Statistics" />
+            <!-- <xsl:call-template name="Statistics" /> -->
 
 
         </fo:root>
     </xsl:template>
-    <xsl:template name="ReportGenerationTime">
-        <fo:page-sequence master-reference="A4">
-            <fo:flow flow-name="xsl-region-body">
-                <fo:block>
-                    Czas i data wygenerowania raportu:
-                    <xsl:value-of select="/clientReport/reportInformation/reportGenerationTime" />
-                </fo:block>
-            </fo:flow>
-        </fo:page-sequence>
-        </xsl:template>
 
             <xsl:template name="Book" match="book">
                 <fo:table-row border-bottom-style="solid">
-                    <fo:table-cell padding="2"><fo:block  text-align="left"><xsl:apply-templates select="title" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block  text-align="left"><xsl:apply-templates select="author" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="genre" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="publisher" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="publishYear" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="coverType" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="pages" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="isbn" /></fo:block></fo:table-cell>
-                    <fo:table-cell padding="2"><fo:block><xsl:apply-templates select="price" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block  text-align="left"><xsl:apply-templates select="title" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block  text-align="left"><xsl:apply-templates select="author" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="genre" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="publisher" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="publishYear" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="coverType" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="pages" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="isbn" /></fo:block></fo:table-cell>
+                    <fo:table-cell padding="0.5mm"><fo:block><xsl:apply-templates select="price" /></fo:block></fo:table-cell>
                 </fo:table-row>
             </xsl:template>
                 <xsl:template name="Author" match="author">
