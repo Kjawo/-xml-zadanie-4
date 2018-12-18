@@ -86,16 +86,42 @@
                 font-style: italic;
                 font-size: 1.25em;
                 }
+                #sortedName {
+                visibility: visible;
+                }
+                #sortedNumber {
+                visibility: hidden;
+                }
+                #sortedTitle {
+                visibility: visible;
+                }
+                #sortedPrice {
+                visibility: hidden;
+                }
+                .sortujTekst{
+                    cursor: pointer;
+                    fill: var(--color3);
+                }
             </style>
             <script type="text/javascript"><![CDATA[
-                function dataClick(evt) {
-                    var dataRect = evt.target;
-                    var currentFill = dataRect.getAttributeNS(null, "fill");
-                    if(currentFill == "green")
-                        dataRect.setAttributeNS(null, "fill", "red");
-                    else
-                        dataRect.setAttributeNS(null, "fill", "green");
+                function sort1(evt) {
+
+                var tmp = window.getComputedStyle(document.getElementById("sortedName")).visibility;
+                document.getElementById("sortedName").style.visibility = window.getComputedStyle(document.getElementById("sortedNumber")).visibility;
+                document.getElementById("sortedNumber").style.visibility = tmp;
+
                 }
+                function sort2(evt) {
+
+                var tmp = window.getComputedStyle(document.getElementById("sortedTitle")).visibility;
+                document.getElementById("sortedTitle").style.visibility = window.getComputedStyle(document.getElementById("sortedPrice")).visibility;
+                document.getElementById("sortedPrice").style.visibility = tmp;
+
+                }
+
+
+
+
             ]]></script>
 
             <g>
@@ -107,6 +133,14 @@
                     <a href="#drawTitleText">
                         <text x="575" y="1200">Przejdź do góry strony</text>
                     </a>
+                </g>
+                <g>
+                    <rect onclick="sort1(evt)" style="cursor:pointer;" width="100" height="40" x="200" y="600"/>
+                    <text onclick="sort1(evt)" class="sortujTekst" x="220" y="625">Posortuj</text>
+                </g>
+                <g>
+                    <rect onclick="sort2(evt)" style="cursor:pointer;" width="100" height="40" x="850" y="1150"/>
+                    <text onclick="sort2(evt)" class="sortujTekst" x="870" y="1175">Posortuj</text>
                 </g>
 
                 <xsl:element name="animate">
@@ -128,7 +162,7 @@
         </xsl:template>
 
         <xsl:template name="DrawBookCountPerAuthorChart">
-            <g class="graph" transform="translate(100 200)">
+            <g class="graph" id="sortedName" transform="translate(100 200)">
                 <g class="grid x-grid" id="xGrid">
                     <line x1="100" x2="100" y1="5" y2="305"></line>
                 </g>
@@ -148,15 +182,82 @@
                     <text x="325" y="0" class="label-title">Liczba książek na danego autora</text>
                 </g>
                 <g class="labels y-labels">
-                    <text x="80" y="40">Umberto Eco</text>
-                    <text x="80" y="80">John Green</text>
-                    <text x="80" y="120">Stephen King</text>
-                    <text x="80" y="160">George Martin</text>
-                    <text x="80" y="200">Bolesław Prus</text>
-                    <text x="80" y="240">Andrzej Sapkowski</text>
-                    <text x="80" y="280">Henryk Sienkiewicz</text>
+                    <xsl:for-each select="/clientReport/statistics/bookCountsPerAuthor/authorsBookCount">
+                        <xsl:sort select="author" />
+                        <xsl:element name="text">
+                            <xsl:attribute name="x" select="80" />
+                            <xsl:attribute name="y" select="40+(position()-1)*40" />
+                            <xsl:value-of select="author" />
+                        </xsl:element>
+                    </xsl:for-each>
                 </g>
                 <xsl:for-each select="/clientReport/statistics/bookCountsPerAuthor/authorsBookCount">
+                    <xsl:sort select="author" />
+                    <g class="data">
+                        <xsl:element name="rect">
+                            <xsl:attribute name="onclick" select="'dataClick(this)'" />
+                            <xsl:attribute name="width" select="bookCount*50" />
+                            <xsl:attribute name="height" select="20" />
+                            <xsl:attribute name="x" select="101" />
+                            <xsl:attribute name="y" select="25+40*(position()-1)" />
+                            <xsl:element name="animate">
+                                <xsl:attribute name="attributeName" select="'width'" />
+                                <xsl:attribute name="attributeType" select="'XML'" />
+                                <xsl:attribute name="begin" select="'0s'" />
+                                <xsl:attribute name="dur" select="'1s'" />
+                                <xsl:attribute name="fill" select="'freeze'" />
+                                <xsl:attribute name="from" select="0" />
+                                <xsl:attribute name="to" select="bookCount*50" />
+                            </xsl:element>
+                        </xsl:element>
+                        <xsl:element name="text">
+                            <xsl:attribute name="x" select="110+bookCount*50" />
+                            <xsl:attribute name="y" select="40+40*(position()-1)" />
+                            <xsl:value-of select="bookCount" />
+                            <xsl:element name="animate">
+                                <xsl:attribute name="attributeName" select="'x'" />
+                                <xsl:attribute name="attributeType" select="'XML'" />
+                                <xsl:attribute name="begin" select="'0s'" />
+                                <xsl:attribute name="dur" select="'1s'" />
+                                <xsl:attribute name="fill" select="'freeze'" />
+                                <xsl:attribute name="from" select="0" />
+                                <xsl:attribute name="to" select="110+bookCount*50" />
+                            </xsl:element>
+                        </xsl:element>
+                    </g>
+                </xsl:for-each>
+            </g>
+            <g class="graph" id="sortedNumber" transform="translate(100 200)">
+                <g class="grid x-grid" id="xGrid">
+                    <line x1="100" x2="100" y1="5" y2="305"></line>
+                </g>
+                <g class="grid y-grid" id="yGrid">
+                    <line x1="100" x2="525" y1="305" y2="305"></line>
+                </g>
+                <g class="labels x-labels">
+                    <text x="100" y="340">0</text>
+                    <text x="150" y="340">1</text>
+                    <text x="200" y="340">2</text>
+                    <text x="250" y="340">3</text>
+                    <text x="300" y="340">4</text>
+                    <text x="350" y="340">5</text>
+                    <text x="400" y="340">6</text>
+                    <text x="450" y="340">7</text>
+                    <text x="500" y="340">8</text>
+                    <text x="325" y="0" class="label-title">Liczba książek na danego autora</text>
+                </g>
+                <g class="labels y-labels">
+                    <xsl:for-each select="/clientReport/statistics/bookCountsPerAuthor/authorsBookCount">
+                        <xsl:sort select="bookCount" />
+                        <xsl:element name="text">
+                            <xsl:attribute name="x" select="80" />
+                            <xsl:attribute name="y" select="40+(position()-1)*40" />
+                            <xsl:value-of select="author" />
+                        </xsl:element>
+                    </xsl:for-each>
+                </g>
+                <xsl:for-each select="/clientReport/statistics/bookCountsPerAuthor/authorsBookCount">
+                    <xsl:sort select="bookCount" />
                     <g class="data">
                         <xsl:element name="rect">
                             <xsl:attribute name="onclick" select="'dataClick(this)'" />
@@ -194,7 +295,7 @@
         </xsl:template>
 
         <xsl:template name="DrawPriceChart">
-            <g class="graph" transform="translate(750 200)">
+            <g class="graph" id="sortedTitle" transform="translate(750 200)">
                 <g class="grid x-grid" id="xGrid">
                     <line x1="100" x2="100" y1="5" y2="865"></line>
                 </g>
@@ -215,6 +316,7 @@
                 </g>
                 <g class="labels y-labels">
                     <xsl:for-each select="/clientReport/book">
+                        <xsl:sort select="title" />
                         <xsl:element name="text">
                             <xsl:attribute name="x" select="80" />
                             <xsl:attribute name="y" select="40+(position()-1)*40" />
@@ -223,6 +325,72 @@
                     </xsl:for-each>
                 </g>
                 <xsl:for-each select="/clientReport/book">
+                    <xsl:sort select="title" />
+                    <g class="data">
+                        <xsl:element name="rect">
+                            <xsl:attribute name="width" select="price*5" />
+                            <xsl:attribute name="height" select="20" />
+                            <xsl:attribute name="x" select="101" />
+                            <xsl:attribute name="y" select="25+40*(position()-1)" />
+                            <xsl:attribute name="onmouseover" select="'dataMouseOver()'" />
+                            <xsl:element name="animate">
+                                <xsl:attribute name="attributeName" select="'width'" />
+                                <xsl:attribute name="attributeType" select="'XML'" />
+                                <xsl:attribute name="begin" select="'0s'" />
+                                <xsl:attribute name="dur" select="'1s'" />
+                                <xsl:attribute name="fill" select="'freeze'" />
+                                <xsl:attribute name="from" select="0" />
+                                <xsl:attribute name="to" select="price*5" />
+                            </xsl:element>
+                        </xsl:element>
+                        <xsl:element name="text">
+                            <xsl:attribute name="x" select="110+price*5" />
+                            <xsl:attribute name="y" select="40+40*(position()-1)" />
+                            <xsl:value-of select="price" />
+                            <xsl:element name="animate">
+                                <xsl:attribute name="attributeName" select="'x'" />
+                                <xsl:attribute name="attributeType" select="'XML'" />
+                                <xsl:attribute name="begin" select="'0s'" />
+                                <xsl:attribute name="dur" select="'1s'" />
+                                <xsl:attribute name="fill" select="'freeze'" />
+                                <xsl:attribute name="from" select="0" />
+                                <xsl:attribute name="to" select="110+price*5" />
+                            </xsl:element>
+                        </xsl:element>
+                    </g>
+                </xsl:for-each>
+            </g>
+            <g class="graph" id="sortedPrice" transform="translate(750 200)">
+                <g class="grid x-grid" id="xGrid">
+                    <line x1="100" x2="100" y1="5" y2="865"></line>
+                </g>
+                <g class="grid y-grid" id="yGrid">
+                    <line x1="100" x2="525" y1="865" y2="865"></line>
+                </g>
+                <g class="labels x-labels">
+                    <text x="100" y="900">0</text>
+                    <text x="150" y="900">10</text>
+                    <text x="200" y="900">20</text>
+                    <text x="250" y="900">30</text>
+                    <text x="300" y="900">40</text>
+                    <text x="350" y="900">50</text>
+                    <text x="400" y="900">60</text>
+                    <text x="450" y="900">70</text>
+                    <text x="500" y="900">80</text>
+                    <text x="325" y="0" class="label-title">Cena danej książki [zł]</text>
+                </g>
+                <g class="labels y-labels">
+                    <xsl:for-each select="/clientReport/book">
+                        <xsl:sort select="price" />
+                        <xsl:element name="text">
+                            <xsl:attribute name="x" select="80" />
+                            <xsl:attribute name="y" select="40+(position()-1)*40" />
+                            <xsl:value-of select="title" />
+                        </xsl:element>
+                    </xsl:for-each>
+                </g>
+                <xsl:for-each select="/clientReport/book">
+                    <xsl:sort select="price" />
                     <g class="data">
                         <xsl:element name="rect">
                             <xsl:attribute name="width" select="price*5" />
