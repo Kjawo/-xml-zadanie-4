@@ -162,7 +162,7 @@
             Statystyki
         </fo:block>
         <fo:block-container margin-top="1cm">
-            <fo:block-container absolute-position="absolute" left="0mm">
+            <fo:block-container absolute-position="absolute" left="30mm">
                 <fo:table table-layout="fixed" border="solid 2pt black" text-align="center">
                     <fo:table-column column-width="30%" background-color="silver"
                                      border-right-style="solid" border-bottom-width="2pt" />
